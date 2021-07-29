@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_action_predispatch_catalog_category_view">
+        <observer name="login_to_view_category" instance="CHK\HomePage\Observer\Loginredirect" />
+    </event>
+    <event name="controller_action_predispatch_catalog_product_view">
+        <observer name="login_to_view_product" instance="CHK\HomePage\Observer\Loginredirect" />
+    </event>
+    <event name="controller_action_predispatch_catalogsearch_result_index">
+        <observer name="login_to_view_search_product" instance="CHK\HomePage\Observer\Loginredirect" />
+    </event>
+    <event name="controller_action_predispatch_customer_account_login">
+        <observer name="login_to_newflow" instance="CHK\HomePage\Observer\Loginpass" />
+    </event>
+</config>
